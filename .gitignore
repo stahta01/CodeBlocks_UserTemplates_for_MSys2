@@ -27,3 +27,13 @@
 *.exe
 *.out
 *.app
+
+# Misc
+*.vcproj
+*.vc
+*.mms
+*.bkl
+Makefile.in
+makefile.unx
+makefile.gcc
+makefile.bcc
