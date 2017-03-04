@@ -3,6 +3,7 @@
 *.lo
 *.o
 *.obj
+*.res
 
 # Precompiled Headers
 *.gch
@@ -37,3 +38,5 @@ Makefile.in
 makefile.unx
 makefile.gcc
 makefile.bcc
+*.layout
+*.depend
