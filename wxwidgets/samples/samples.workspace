@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="wxWidgets Samples for MSys2">
+		<Project filename="uiaction.cbp" />
+		<Project filename="minimal.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
