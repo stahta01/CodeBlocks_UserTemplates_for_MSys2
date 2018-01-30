@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="wxWidgets Samples for MSys2">
-		<Project filename="uiaction.cbp" />
+		<Project filename="console.cbp" />
 		<Project filename="minimal.cbp" />
+		<Project filename="access.cbp" />
+		<Project filename="animate.cbp" />
+		<Project filename="drawing.cbp" />
+		<Project filename="image.cbp" />
+		<Project filename="splash.cbp" />
+		<Project filename="toolbar.cbp" />
+		<Project filename="uiaction.cbp" />
+		<Project filename="widgets.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
