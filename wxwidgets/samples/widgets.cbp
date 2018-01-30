@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="widgets" />
+		<Option execution_dir="." />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="wx3.0MSW_DLL">
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
+				<Option object_output=".objs/$(TARGET_NAME)" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-DwxOVERRIDE=override" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_SUFFIX" value="u" />
+					<Variable name="WX_TOOLKIT" value="msw" />
+					<Variable name="WX_VERSION" value="3.0" />
+				</Environment>
+			</Target>
+			<Target title="wx3.0GTK2_DLL">
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
+				<Option object_output=".objs/$(TARGET_NAME)" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-D__WXGTK__" />
+					<Add option="-DwxOVERRIDE=override" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_SUFFIX" value="u" />
+					<Variable name="WX_TOOLKIT" value="gtk2" />
+					<Variable name="WX_VERSION" value="3.0" />
+				</Environment>
+			</Target>
+			<Target title="wx3.1MSW_DLL">
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
+				<Option object_output=".objs/$(TARGET_NAME)" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-D__WXMSW__" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="wx_msw$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
+					<Add library="wx_msw$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_SUFFIX" value="u" />
+					<Variable name="WX_TOOLKIT" value="msw" />
+					<Variable name="WX_VERSION" value="3.1" />
+				</Environment>
+			</Target>
+			<Target title="wx3.1GTK2_DLL">
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
+				<Option object_output=".objs/$(TARGET_NAME)" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-D__WXGTK__" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_SUFFIX" value="u" />
+					<Variable name="WX_TOOLKIT" value="gtk2" />
+					<Variable name="WX_VERSION" value="3.1" />
+				</Environment>
+			</Target>
+			<Target title="wx2.8MSW_DLL">
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
+				<Option object_output=".objs/$(TARGET_NAME)" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-DwxOVERRIDE=override" />
+					<Add option="-DwxDECLARE_EVENT_TABLE=DECLARE_EVENT_TABLE" />
+					<Add option="-DwxBEGIN_EVENT_TABLE=BEGIN_EVENT_TABLE" />
+					<Add option="-DwxEND_EVENT_TABLE=END_EVENT_TABLE" />
+					<Add option="-DwxIMPLEMENT_APP=IMPLEMENT_APP" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-release-$(WX_VERSION)" />
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_SUFFIX" value="u" />
+					<Variable name="WX_TOOLKIT" value="msw" />
+					<Variable name="WX_VERSION" value="2.8" />
+				</Environment>
+			</Target>
+			<Environment>
+				<Variable name="APP_NAME" value="widgets" />
+			</Environment>
+		</Build>
+		<ResourceCompiler>
+			<Add directory="%WXWIN%/include" />
+		</ResourceCompiler>
+		<Unit filename="widgets/activityindicator.cpp" />
+		<Unit filename="widgets/bmpcombobox.cpp" />
+		<Unit filename="widgets/button.cpp" />
+		<Unit filename="widgets/checkbox.cpp" />
+		<Unit filename="widgets/choice.cpp" />
+		<Unit filename="widgets/clrpicker.cpp" />
+		<Unit filename="widgets/combobox.cpp" />
+		<Unit filename="widgets/datepick.cpp" />
+		<Unit filename="widgets/dirctrl.cpp" />
+		<Unit filename="widgets/dirpicker.cpp" />
+		<Unit filename="widgets/editlbox.cpp" />
+		<Unit filename="widgets/filectrl.cpp" />
+		<Unit filename="widgets/filepicker.cpp" />
+		<Unit filename="widgets/fontpicker.cpp" />
+		<Unit filename="widgets/gauge.cpp" />
+		<Unit filename="widgets/headerctrl.cpp" />
+		<Unit filename="widgets/hyperlnk.cpp" />
+		<Unit filename="widgets/icons/activityindicator.xpm" />
+		<Unit filename="widgets/icons/bmpbtn.xpm" />
+		<Unit filename="widgets/icons/bmpcombobox.xpm" />
+		<Unit filename="widgets/icons/button.xpm" />
+		<Unit filename="widgets/icons/checkbox.xpm" />
+		<Unit filename="widgets/icons/choice.xpm" />
+		<Unit filename="widgets/icons/choicebk.xpm" />
+		<Unit filename="widgets/icons/clrpicker.xpm" />
+		<Unit filename="widgets/icons/combobox.xpm" />
+		<Unit filename="widgets/icons/datepick.xpm" />
+		<Unit filename="widgets/icons/dirctrl.xpm" />
+		<Unit filename="widgets/icons/dirpicker.xpm" />
+		<Unit filename="widgets/icons/filepicker.xpm" />
+		<Unit filename="widgets/icons/fontpicker.xpm" />
+		<Unit filename="widgets/icons/gauge.xpm" />
+		<Unit filename="widgets/icons/header.xpm" />
+		<Unit filename="widgets/icons/hyperlnk.xpm" />
+		<Unit filename="widgets/icons/listbook.xpm" />
+		<Unit filename="widgets/icons/listbox.xpm" />
+		<Unit filename="widgets/icons/native.xpm" />
+		<Unit filename="widgets/icons/notebook.xpm" />
+		<Unit filename="widgets/icons/odcombobox.xpm" />
+		<Unit filename="widgets/icons/radiobox.xpm" />
+		<Unit filename="widgets/icons/scrolbar.xpm" />
+		<Unit filename="widgets/icons/slider.xpm" />
+		<Unit filename="widgets/icons/spinbtn.xpm" />
+		<Unit filename="widgets/icons/statbmp.xpm" />
+		<Unit filename="widgets/icons/statbox.xpm" />
+		<Unit filename="widgets/icons/stattext.xpm" />
+		<Unit filename="widgets/icons/text.xpm" />
+		<Unit filename="widgets/icons/timepick.xpm" />
+		<Unit filename="widgets/icons/toggle.xpm" />
+		<Unit filename="widgets/itemcontainer.cpp" />
+		<Unit filename="widgets/itemcontainer.h" />
+		<Unit filename="widgets/listbox.cpp" />
+		<Unit filename="widgets/makefile.mic" />
+		<Unit filename="widgets/native.cpp" />
+		<Unit filename="widgets/notebook.cpp" />
+		<Unit filename="widgets/odcombobox.cpp" />
+		<Unit filename="widgets/radiobox.cpp" />
+		<Unit filename="widgets/searchctrl.cpp" />
+		<Unit filename="widgets/slider.cpp" />
+		<Unit filename="widgets/spinbtn.cpp" />
+		<Unit filename="widgets/statbmp.cpp" />
+		<Unit filename="widgets/static.cpp" />
+		<Unit filename="widgets/textctrl.cpp" />
+		<Unit filename="widgets/timepick.cpp" />
+		<Unit filename="widgets/toggle.cpp" />
+		<Unit filename="widgets/widgets.cpp" />
+		<Unit filename="widgets/widgets.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
