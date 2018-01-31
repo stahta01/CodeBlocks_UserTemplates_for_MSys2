@@ -2,20 +2,22 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="minimal" />
+		<Option title="artprov" />
 		<Option execution_dir="." />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="wx3.0MSW_DLL">
-				<Option output="bin/$(APP_DIR)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_DIR)" />
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
 				<Option object_output=".objs/$(TARGET_NAME)" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-DwxOVERRIDE=override" />
+					<Add option="-DwxART_EDIT=wxART_MAKE_ART_ID(wxART_EDIT)" />
+					<Add option="-DwxART_FULL_SCREEN=wxART_MAKE_ART_ID(wxART_FULL_SCREEN)" />
 					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
 					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</Compiler>
@@ -33,8 +35,8 @@
 				</Environment>
 			</Target>
 			<Target title="wx3.0GTK2_DLL">
-				<Option output="bin/$(APP_DIR)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_DIR)" />
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
 				<Option object_output=".objs/$(TARGET_NAME)" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -59,8 +61,8 @@
 				</Environment>
 			</Target>
 			<Target title="wx3.1MSW_DLL">
-				<Option output="bin/$(APP_DIR)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_DIR)" />
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
 				<Option object_output=".objs/$(TARGET_NAME)" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -74,7 +76,7 @@
 					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_msw$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
 					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 				</Linker>
 				<Environment>
@@ -84,8 +86,8 @@
 				</Environment>
 			</Target>
 			<Target title="wx3.1GTK2_DLL">
-				<Option output="bin/$(APP_DIR)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_DIR)" />
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
 				<Option object_output=".objs/$(TARGET_NAME)" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -109,8 +111,8 @@
 				</Environment>
 			</Target>
 			<Target title="wx2.8MSW_DLL">
-				<Option output="bin/$(APP_DIR)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_DIR)" />
+				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_NAME)" />
 				<Option object_output=".objs/$(TARGET_NAME)" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -138,18 +140,25 @@
 				</Environment>
 			</Target>
 			<Environment>
-				<Variable name="APP_DIR" value="minimal" />
-				<Variable name="APP_NAME" value="$(APP_DIR)" />
+				<Variable name="APP_NAME" value="artprov" />
 			</Environment>
 		</Build>
 		<ResourceCompiler>
 			<Add directory="%WXWIN%/include" />
 		</ResourceCompiler>
-		<Unit filename="minimal/minimal.cpp" />
-		<Unit filename="sample.ico" />
-		<Unit filename="sample.rc">
+		<Unit filename="artprov/artbrows.cpp" />
+		<Unit filename="artprov/artbrows.h" />
+		<Unit filename="artprov/arttest.cpp" />
+		<Unit filename="artprov/arttest.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="artprov/error.xpm" />
+		<Unit filename="artprov/info.xpm" />
+		<Unit filename="artprov/mondrian.ico" />
+		<Unit filename="artprov/mondrian.xpm" />
+		<Unit filename="artprov/null.xpm" />
+		<Unit filename="artprov/question.xpm" />
+		<Unit filename="artprov/warning.xpm" />
 		<Extensions>
 			<code_completion />
 			<envvars />

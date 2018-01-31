@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="minimal" />
+		<Option title="ipcbaseserver" />
 		<Option execution_dir="." />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
@@ -74,7 +74,7 @@
 					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_msw$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
 					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 				</Linker>
 				<Environment>
@@ -138,16 +138,24 @@
 				</Environment>
 			</Target>
 			<Environment>
-				<Variable name="APP_DIR" value="minimal" />
-				<Variable name="APP_NAME" value="$(APP_DIR)" />
+				<Variable name="APP_DIR" value="ipc" />
+				<Variable name="APP_NAME" value="baseserver" />
 			</Environment>
 		</Build>
 		<ResourceCompiler>
 			<Add directory="%WXWIN%/include" />
 		</ResourceCompiler>
-		<Unit filename="minimal/minimal.cpp" />
-		<Unit filename="sample.ico" />
-		<Unit filename="sample.rc">
+		<Unit filename="ipc/baseserver.cpp" />
+		<Unit filename="ipc/client.h" />
+		<Unit filename="ipc/client.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="ipc/connection.h" />
+		<Unit filename="ipc/ipcsetup.h" />
+		<Unit filename="ipc/mondrian.ico" />
+		<Unit filename="ipc/mondrian.xpm" />
+		<Unit filename="ipc/server.h" />
+		<Unit filename="ipc/server.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Extensions>
