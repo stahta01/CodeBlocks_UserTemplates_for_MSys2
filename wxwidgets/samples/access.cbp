@@ -22,6 +22,23 @@
 					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</ResourceCompiler>
 				<Linker>
+					<Add option="-lgdi32" />
+					<Add option="-lcomdlg32" />
+					<Add option="-lwinspool" />
+					<Add option="-lwinmm" />
+					<Add option="-lshell32" />
+					<Add option="-lshlwapi" />
+					<Add option="-lcomctl32" />
+					<Add option="-lole32" />
+					<Add option="-loleaut32" />
+					<Add option="-luuid" />
+					<Add option="-lrpcrt4" />
+					<Add option="-ladvapi32" />
+					<Add option="-lversion" />
+					<Add option="-lwsock32" />
+					<Add option="-lwininet" />
+					<Add option="-loleacc" />
+					<Add option="-luxtheme" />
 					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
 					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 				</Linker>
@@ -146,6 +163,23 @@
 					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</ResourceCompiler>
 				<Linker>
+					<Add option="-lgdi32" />
+					<Add option="-lcomdlg32" />
+					<Add option="-lwinspool" />
+					<Add option="-lwinmm" />
+					<Add option="-lshell32" />
+					<Add option="-lshlwapi" />
+					<Add option="-lcomctl32" />
+					<Add option="-lole32" />
+					<Add option="-loleaut32" />
+					<Add option="-luuid" />
+					<Add option="-lrpcrt4" />
+					<Add option="-ladvapi32" />
+					<Add option="-lversion" />
+					<Add option="-lwsock32" />
+					<Add option="-lwininet" />
+					<Add option="-loleacc" />
+					<Add option="-luxtheme" />
 					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
 					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 				</Linker>

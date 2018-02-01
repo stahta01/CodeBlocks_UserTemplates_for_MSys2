@@ -15,6 +15,7 @@
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
+					<Add option="-D__WXMSW__" />
 					<Add option="-DwxOVERRIDE=override" />
 					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
 					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
@@ -116,6 +117,7 @@
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
+					<Add option="-D__WXMSW__" />
 					<Add option="-DwxOVERRIDE=override" />
 					<Add option="-DwxDECLARE_EVENT_TABLE=DECLARE_EVENT_TABLE" />
 					<Add option="-DwxBEGIN_EVENT_TABLE=BEGIN_EVENT_TABLE" />
