@@ -7,15 +7,20 @@
 		<Project filename="animate.cbp" />
 		<Project filename="artprov.cbp" />
 		<Project filename="aui.cbp" />
+		<Project filename="dataview.cbp" />
 		<Project filename="drawing.cbp" />
+		<Project filename="grid.cbp" />
 		<Project filename="image.cbp" />
 		<Project filename="ipcbaseserver.cbp" />
 		<Project filename="notebook.cbp" />
+		<Project filename="penguin.cbp" />
 		<Project filename="printing.cbp" />
 		<Project filename="splash.cbp" />
+		<Project filename="stc.cbp" />
 		<Project filename="toolbar.cbp" />
 		<Project filename="treectrl.cbp" />
 		<Project filename="uiaction.cbp" />
 		<Project filename="widgets.cbp" />
+		<Project filename="xrc.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

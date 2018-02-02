@@ -2,19 +2,20 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="splash" />
+		<Option title="grid" />
 		<Option execution_dir="." />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="wx3.0MSW_DLL">
-				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_NAME)" />
+				<Option output="bin/$(APP_DIR)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_DIR)" />
 				<Option object_output=".objs/$(TARGET_NAME)" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
+					<Add option="-D__WXMSW__" />
 					<Add option="-DwxOVERRIDE=override" />
 					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-$(WX_VERSION)" />
 					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
@@ -34,8 +35,8 @@
 				</Environment>
 			</Target>
 			<Target title="wx3.0GTK2_DLL">
-				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_NAME)" />
+				<Option output="bin/$(APP_DIR)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_DIR)" />
 				<Option object_output=".objs/$(TARGET_NAME)" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -50,7 +51,6 @@
 					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
 					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
 					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 				</Linker>
@@ -61,8 +61,8 @@
 				</Environment>
 			</Target>
 			<Target title="wx3.1MSW_DLL">
-				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_NAME)" />
+				<Option output="bin/$(APP_DIR)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_DIR)" />
 				<Option object_output=".objs/$(TARGET_NAME)" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -76,9 +76,8 @@
 					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="wx_msw$(WX_SUFFIX)_media-$(WX_VERSION).dll" />
-					<Add library="wx_msw$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
-					<Add library="wx_msw$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
 					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
 				</Linker>
 				<Environment>
@@ -88,8 +87,8 @@
 				</Environment>
 			</Target>
 			<Target title="wx3.1GTK2_DLL">
-				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_NAME)" />
+				<Option output="bin/$(APP_DIR)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/$(APP_DIR)" />
 				<Option object_output=".objs/$(TARGET_NAME)" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -113,53 +112,21 @@
 					<Variable name="WX_VERSION" value="3.1" />
 				</Environment>
 			</Target>
-			<Target title="wx2.8MSW_DLL">
-				<Option output="bin/$(APP_NAME)/$(TARGET_NAME)/$(APP_NAME)" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="bin/$(APP_NAME)" />
-				<Option object_output=".objs/$(TARGET_NAME)" />
-				<Option type="0" />
-				<Option compiler="gcc" />
-				<Option projectLinkerOptionsRelation="2" />
-				<Compiler>
-					<Add option="-DwxOVERRIDE=override" />
-					<Add option="-DwxDECLARE_EVENT_TABLE=DECLARE_EVENT_TABLE" />
-					<Add option="-DwxBEGIN_EVENT_TABLE=BEGIN_EVENT_TABLE" />
-					<Add option="-DwxEND_EVENT_TABLE=END_EVENT_TABLE" />
-					<Add option="-DwxIMPLEMENT_APP=IMPLEMENT_APP" />
-					<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-unicode-release-$(WX_VERSION)" />
-					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
-				</Compiler>
-				<ResourceCompiler>
-					<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
-				</ResourceCompiler>
-				<Linker>
-					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
-					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
-					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
-				</Linker>
-				<Environment>
-					<Variable name="WX_SUFFIX" value="u" />
-					<Variable name="WX_TOOLKIT" value="msw" />
-					<Variable name="WX_VERSION" value="2.8" />
-				</Environment>
-			</Target>
 			<Environment>
-				<Variable name="APP_NAME" value="splash" />
+				<Variable name="APP_DIR" value="grid" />
+				<Variable name="APP_NAME" value="$(APP_DIR)" />
 			</Environment>
 		</Build>
 		<ResourceCompiler>
 			<Add directory="%WXWIN%/include" />
 		</ResourceCompiler>
-		<ExtraCommands>
-			<Add after="cp $(APP_NAME)/*.png bin/$(APP_NAME)/" />
-			<Mode after="always" />
-		</ExtraCommands>
-		<Unit filename="splash/mobile.xpm" />
-		<Unit filename="splash/press.mpg" />
-		<Unit filename="splash/press.pov" />
-		<Unit filename="splash/splash.cpp" />
-		<Unit filename="splash/splash.png" />
-		<Unit filename="splash/splash.pov" />
+		<Unit filename="grid/bitmap1.bmp" />
+		<Unit filename="grid/bitmap2.bmp" />
+		<Unit filename="grid/griddemo.cpp" />
+		<Unit filename="grid/griddemo.h" />
+		<Unit filename="grid/griddemo.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
